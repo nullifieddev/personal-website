@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- Add data-bs-theme="auto" to enable auto mode detection -->
 <html lang="en" data-bs-theme="auto">
 
 <head>
@@ -27,6 +26,15 @@
     <!-- Your Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/theme-switch.css">
+
+    <script>
+        // Immediately set initial theme to prevent flash
+        const initTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-bs-theme', initTheme === 'auto' ? 
+            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : 
+            initTheme
+        );
+    </script>
 
 </head>
 

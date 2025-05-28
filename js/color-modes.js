@@ -18,20 +18,28 @@
     }
 
     const setTheme = theme => {
-        // Set the theme attribute on html element
-        if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            document.documentElement.setAttribute('data-bs-theme', 'dark')
-        } else if (theme === 'auto') {
-            document.documentElement.setAttribute('data-bs-theme', 'light')
+        if (theme === 'auto') {
+            // If auto, use system preference
+            const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-bs-theme', systemTheme);
         } else {
-            document.documentElement.setAttribute('data-bs-theme', theme)
+            // Otherwise use the selected theme
+            document.documentElement.setAttribute('data-bs-theme', theme);
         }
 
-        // Update the theme switch position
-        const themeSwitch = document.querySelector('.theme-switch')
+        // Update the theme-switch state
+        const themeSwitch = document.querySelector('.theme-switch');
         if (themeSwitch) {
-            themeSwitch.setAttribute('data-theme', theme)
+            themeSwitch.setAttribute('data-theme', theme);
         }
+
+        // Update active states of buttons
+        document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+            element.classList.toggle('active', element.getAttribute('data-bs-theme-value') === theme);
+        });
+
+        // Store the theme preference
+        localStorage.setItem('theme', theme);
     }
 
     const showActiveTheme = theme => {
@@ -55,22 +63,20 @@
         themeSwitcher.setAttribute('data-theme', theme)
     }
 
-    // Initialize theme
-    setTheme(getPreferredTheme())
-
+    // Set up theme when DOM is loaded
     window.addEventListener('DOMContentLoaded', () => {
-        showActiveTheme(getPreferredTheme())
-        
+        // Initialize with stored theme or system preference
+        const storedTheme = localStorage.getItem('theme');
+        const initialTheme = storedTheme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        setTheme(initialTheme);
+
         // Add click handlers to theme toggles
-        document.querySelectorAll('[data-bs-theme-value]')
-            .forEach(toggle => {
-                toggle.addEventListener('click', () => {
-                    const theme = toggle.getAttribute('data-bs-theme-value')
-                    setStoredTheme(theme)
-                    setTheme(theme)
-                    showActiveTheme(theme)
-                })
-            })
+        document.querySelectorAll('[data-bs-theme-value]').forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const theme = toggle.getAttribute('data-bs-theme-value');
+                setTheme(theme);
+            });
+        });
     })
 
     // Watch for system theme changes
