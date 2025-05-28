@@ -19,16 +19,29 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Fetch all history and tags
+      
+      - name: Get version from git
+        id: get_version
+        run: |
+          VERSION=$(git describe --tags --always || echo "v0.0.0")
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+          
+      - name: Update version in HTML
+        run: |
+          sed -i "s/<span id=\"version\">.*<\/span>/<span id=\"version\">$VERSION<\/span>/" index.html
       
       - name: Setup Pages
-        uses: actions/configure-pages@v3
+        uses: actions/configure-pages@v4
         
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
           path: '.'
           
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
+
