@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<!-- Add data-bs-theme="auto" to enable auto mode detection -->
+<html lang="en" data-bs-theme="auto">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MFT@DCM</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="assets/mft-favicon-16x16.svg" sizes="16x16">
+    <link rel="icon" type="image/svg+xml" href="assets/mft-favicon-32x32.svg" sizes="32x32">
+    <link rel="icon" type="image/svg+xml" href="assets/mft-favicon-48x48.svg" sizes="48x48">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Karla:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons (Needed for the switcher) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Your Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/theme-switch.css">
+
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="90">
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNavbar">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <img src="assets/mft-logo.svg" alt="MFT Logo" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                <!-- Center Navigation Links -->
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#resume">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+
+                <!-- Color Mode Switcher -->
+                <div class="navbar-nav">
+                    <div class="nav-item">
+                        <div class="theme-switch-wrapper">
+                            <div class="theme-switch" data-theme="auto">
+                                <button type="button" data-bs-theme-value="light">
+                                    <i class="bi bi-sun-fill" data-theme-icon="bi-sun-fill"></i>
+                                </button>
+                                <button type="button" data-bs-theme-value="auto">
+                                    <i class="bi bi-circle-half" data-theme-icon="bi-circle-half"></i>
+                                </button>
+                                <button type="button" data-bs-theme-value="dark">
+                                    <i class="bi bi-moon-stars-fill" data-theme-icon="bi-moon-stars-fill"></i>
+                                </button>
+                                <span class="slider"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Color Mode Switcher -->
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home"
+            class="section-padding d-flex align-items-center justify-content-center min-vh-100 text-center text-body bg-body-tertiary">
+            <div class="container">
+                <h1 class="display-3 fw-bold">Martin Ferrero-Thompson</h1>
+                <p class="lead fs-3 text-white mb-2">
+                    AI Engineer · Vibe Coder · Full-Stack Developer 
+                </p>
+                <p class="fs-5 text-white mb-4">
+                    I craft elegant digital solutions at the intersection of code and intelligence.<br>
+                    Working with my Agentic friends, I design, build, and explore the future of web and AI...<br>
+                    and I genuinely love what I do.<br>
+                </p>
+
+                <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+                    <a href="#projects" class="btn btn-primary btn-lg">
+                        <i class="bi bi-code-square me-2"></i>
+                        <span>View My Work</span>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary btn-lg">
+                        <i class="bi bi-chat-text me-2"></i>
+                        <span>Contact Me</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section-padding">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="display-4 fw-bold mb-4">About Me</h2>
+                        <p class="lead mb-4">
+                            Code-slinger, AI whisperer, and explorer of digital frontiers
+                        </p>
+                        <p class="fst-italic text-muted mb-5">
+                            "With a keyboard in one hand and curiosity in the other, I team up with agents (and humans) to make the web smarter — and way more fun."
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center g-4">
+                    <!-- Profile Card -->
+                    <div class="col-md-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body p-4 text-center">
+                                <div class="profile-img-outer mb-4">
+                                    <img src="assets/me-at-client.png" alt="Me at Clients Office"
+                                        class="rounded-circle img-fluid shadow-sm profile-img"
+                                        style="max-width: 200px;">
+                                </div>
+                                <h3 class="card-title h4 mb-3">Martin Ferrero-Thompson</h3>
+                                <div class="d-flex justify-content-center gap-3 mb-4">
+                                    <a href="https://github.com/Martin-Ferrero-Thompson" class="text-decoration-none"
+                                        target="_blank" rel="noopener noreferrer">
+                                        <div class="contact-icon-wrapper rounded-circle">
+                                            <i class="bi bi-github fs-5"></i>
+                                        </div>
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/martin-ferrero-thompson/" class="text-decoration-none" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <div class="contact-icon-wrapper rounded-circle">
+                                            <i class="bi bi-linkedin fs-5"></i>
+                                        </div>
+                                    </a>
+                                    <a href="mailto:martin@designcodemastery.com" class="text-decoration-none">
+                                        <div class="contact-icon-wrapper rounded-circle">
+                                            <i class="bi bi-envelope-fill fs-5"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <div class="contact-icon-wrapper rounded-circle me-2">
+                                        <i class="bi bi-geo-alt-fill fs-5"></i>
+                                    </div>
+                                    <span class="text-muted">Pamplona, España</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bio Card -->
+                    <div class="col-md-8">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body p-4">
+                                <h3 class="card-title h4 mb-4">My Journey</h3>
+
+                                <div class="d-flex flex-column gap-4">
+                                    <!-- Background -->
+                                    <div class="d-flex align-items-start">
+                                        <div class="contact-icon-wrapper rounded-circle me-3">
+                                            <i class="bi bi-person-fill fs-4"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="h6 mb-2">Background</h4>
+                                            <p class="text-muted mb-0">
+                                                Full-Stack Developer with a passion for creating intuitive and efficient
+                                                web solutions. My journey in tech started with a curiosity about how
+                                                things work, leading me to explore the vast world of web development.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Expertise -->
+                                    <div class="d-flex align-items-start">
+                                        <div class="contact-icon-wrapper rounded-circle me-3">
+                                            <i class="bi bi-code-square fs-4"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="h6 mb-2">Expertise</h4>
+                                            <p class="text-muted mb-0">
+                                                Specialized in modern web technologies and frameworks. Experienced in
+                                                building responsive, user-friendly applications with a focus on clean,
+                                                maintainable code and optimal performance.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Interests -->
+                                    <div class="d-flex align-items-start">
+                                        <div class="contact-icon-wrapper rounded-circle me-3">
+                                            <i class="bi bi-heart-fill fs-4"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="h6 mb-2">Beyond Coding</h4>
+                                            <p class="text-muted mb-0">
+                                                When I'm not coding, you'll find me exploring new technologies,
+                                                contributing to open-source projects, and staying current with the
+                                                latest industry trends. I believe in continuous learning and growth.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Tech Stack -->
+                                <div class="mt-4 pt-3 border-top">
+                                    <h4 class="h6 mb-3">Current Tech Stack:</h4>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <span class="badge bg-primary bg-opacity-10 text-primary p-2">JavaScript</span>
+                                        <span class="badge bg-primary bg-opacity-10 text-primary p-2">React</span>
+                                        <span class="badge bg-primary bg-opacity-10 text-primary p-2">Node.js</span>
+                                        <span class="badge bg-primary bg-opacity-10 text-primary p-2">Python</span>
+                                        <span class="badge bg-primary bg-opacity-10 text-primary p-2">MongoDB</span>
+                                        <span class="badge bg-primary bg-opacity-10 text-primary p-2">AWS</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resume Section -->
+        <section id="resume" class="section-padding bg-body-tertiary">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="display-4 fw-bold mb-4">Professional Journey</h2>
+                        <p class="lead mb-4">
+                            A chronicle of my experience, education, and skill set
+                        </p>
+                        <div class="mb-5">
+                            <a href="assets/Your_Name_Resume.pdf" class="btn btn-primary btn-lg" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="bi bi-download me-2"></i> Download Full Resume (PDF)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center g-4">
+                    <!-- Work Experience Card -->
+                    <div class="col-md-12">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-4">
+                                    <div class="contact-icon-wrapper bg-primary bg-opacity-10 p-3 rounded-circle me-3">
+                                        <i class="bi bi-briefcase-fill fs-4 text-primary"></i>
+                                    </div>
+                                    <h3 class="card-title h4 mb-0">Work Experience</h3>
+                                </div>
+
+                                <!-- Experience Timeline -->
+                                <div class="position-relative timeline-container">
+                                    <!-- Experience Item 1 -->
+                                    <div class="timeline-item mb-4">
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <div class="timeline-info">
+                                                    <h4 class="h6 fw-bold mb-1">[Job Title]</h4>
+                                                    <p class="text-primary mb-1">[Company Name]</p>
+                                                    <p class="text-muted small mb-2">[City, State/Country]</p>
+                                                    <span class="badge bg-primary bg-opacity-10 text-primary">
+                                                        [Start Date] – [End Date or Present]
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <div class="timeline-content">
+                                                    <ul class="list-unstyled mb-0">
+                                                        <li class="mb-2">
+                                                            <i class="bi bi-check2-circle text-primary me-2"></i>
+                                                            [Responsibility or Achievement 1]
+                                                        </li>
+                                                        <li class="mb-2">
+                                                            <i class="bi bi-check2-circle text-primary me-2"></i>
+                                                            [Responsibility or Achievement 2]
+                                                        </li>
+                                                        <li>
+                                                            <i class="bi bi-check2-circle text-primary me-2"></i>
+                                                            [Responsibility or Achievement 3]
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Experience Item 2 -->
+                                    <div class="timeline-item">
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <div class="timeline-info">
+                                                    <h4 class="h6 fw-bold mb-1">[Previous Job Title]</h4>
+                                                    <p class="text-primary mb-1">[Previous Company Name]</p>
+                                                    <p class="text-muted small mb-2">[City, State/Country]</p>
+                                                    <span class="badge bg-primary bg-opacity-10 text-primary">
+                                                        [Start Date] – [End Date]
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <div class="timeline-content">
+                                                    <ul class="list-unstyled mb-0">
+                                                        <li class="mb-2">
+                                                            <i class="bi bi-check2-circle text-primary me-2"></i>
+                                                            [Responsibility or Achievement 1]
+                                                        </li>
+                                                        <li>
+                                                            <i class="bi bi-check2-circle text-primary me-2"></i>
+                                                            [Responsibility or Achievement 2]
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Education Card -->
+                    <div class="col-md-6">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-4">
+                                    <div class="contact-icon-wrapper bg-primary bg-opacity-10 p-3 rounded-circle me-3">
+                                        <i class="bi bi-mortarboard-fill fs-4 text-primary"></i>
+                                    </div>
+                                    <h3 class="card-title h4 mb-0">Education</h3>
+                                </div>
+
+                                <!-- Education Item 1 -->
+                                <div class="mb-4">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div
+                                            class="contact-icon-wrapper bg-primary bg-opacity-10 p-2 rounded-circle me-2">
+                                            <i class="bi bi-bookmark-fill fs-5 text-primary"></i>
+                                        </div>
+                                        <h4 class="h6 fw-bold mb-0">[Degree Name or Certification]</h4>
+                                    </div>
+                                    <div class="ps-5">
+                                        <p class="text-primary mb-1">[Institution Name]</p>
+                                        <p class="text-muted small mb-2">[City, State/Country]</p>
+                                        <p class="text-muted small mb-2">[Year Graduated or Expected Graduation]</p>
+                                        <p class="small mb-0">[Optional: Minor, Concentration, or Key Courses]</p>
+                                    </div>
+                                </div>
+
+                                <!-- Education Item 2 -->
+                                <div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div
+                                            class="contact-icon-wrapper bg-primary bg-opacity-10 p-2 rounded-circle me-2">
+                                            <i class="bi bi-bookmark-fill fs-5 text-primary"></i>
+                                        </div>
+                                        <h4 class="h6 fw-bold mb-0">[Another Degree or Certification]</h4>
+                                    </div>
+                                    <div class="ps-5">
+                                        <p class="text-primary mb-1">[Institution Name]</p>
+                                        <p class="text-muted small mb-2">[City, State/Country]</p>
+                                        <p class="text-muted small mb-2">[Year Graduated]</p>
+                                        <p class="small mb-0">[Relevant details]</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Skills Card -->
+                    <div class="col-md-6">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-4">
+                                    <div class="contact-icon-wrapper rounded-circle me-3">
+                                        <i class="bi bi-tools fs-4"></i>
+                                    </div>
+                                    <h3 class="card-title h4 mb-0">Skills & Tools</h3>
+                                </div>
+
+                                <!-- Languages & Databases -->
+                                <div class="mb-4">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="contact-icon-wrapper rounded-circle me-2">
+                                            <i class="bi bi-code-square fs-5"></i>
+                                        </div>
+                                        <h4 class="h6 mb-0">Languages & Databases</h4>
+                                    </div>
+                                    <div class="d-flex flex-wrap gap-2 ps-5">
+                                        <span class="badge bg-primary bg-opacity-10 text-primary p-2">JavaScript</span>
+                                        <span class="badge bg-primary bg-opacity-10 text-primary p-2">HTML5</span>
+                                        <span class="badge bg-primary bg-opacity-10 text-primary p-2">CSS3</span>
+                                        <span class="badge bg-primary bg-opacity-10 text-primary p-2">Python</span>
+                                        <span class="badge bg-primary bg-opacity-10 text-primary p-2">SQL</span>
+                                        <span class="badge bg-primary bg-opacity-10 text-primary p-2">MongoDB</span>
+                                    </div>
+                                </div>
+
+                                <!-- Frameworks & Libraries -->
+                                <div class="mb-4">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="contact-icon-wrapper rounded-circle me-2">
+                                            <i class="bi bi-box fs-5"></i>
+                                        </div>
+                                        <h4 class="h6 mb-0">Frameworks & Libraries</h4>
+                                    </div>
+                                    <div class="d-flex flex-wrap gap-2 ps-5">
+                                        <span class="badge bg-primary bg-opacity-10 text-primary p-2">React</span>
+                                        <span class="badge bg-primary bg-opacity-10 text-primary p-2">Node.js</span>
+                                        <span class="badge bg-primary bg-opacity-10 text-primary p-2">Express</span>
+                                        <span class="badge bg-primary bg-opacity-10 text-primary p-2">Bootstrap</span>
+                                        <span class="badge bg-primary bg-opacity-10 text-primary p-2">Django</span>
+                                    </div>
+                                </div>
+
+                                <!-- Tools & Platforms -->
+                                <div class="mb-4">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="contact-icon-wrapper rounded-circle me-2">
+                                            <i class="bi bi-gear fs-5"></i>
+                                        </div>
+                                        <h4 class="h6 mb-0">Tools & Platforms</h4>
+                                    </div>
+                                    <div class="d-flex flex-wrap gap-2 ps-5">
+                                        <span class="badge bg-primary bg-opacity-10 text-primary p-2">Git &
+                                            GitHub</span>
+                                        <span class="badge bg-primary bg-opacity-10 text-primary p-2">Docker</span>
+                                        <span class="badge bg-primary bg-opacity-10 text-primary p-2">AWS</span>
+                                        <span class="badge bg-primary bg-opacity-10 text-primary p-2">VS Code</span>
+                                        <span class="badge bg-primary bg-opacity-10 text-primary p-2">Linux</span>
+                                    </div>
+                                </div>
+
+                                <!-- Methodologies -->
+                                <div>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="contact-icon-wrapper rounded-circle me-2">
+                                            <i class="bi bi-diagram-3 fs-5"></i>
+                                        </div>
+                                        <h4 class="h6 mb-0">Methodologies</h4>
+                                    </div>
+                                    <div class="d-flex flex-wrap gap-2 ps-5">
+                                        <span class="badge bg-primary bg-opacity-10 text-primary p-2">Agile/Scrum</span>
+                                        <span class="badge bg-primary bg-opacity-10 text-primary p-2">RESTful
+                                            APIs</span>
+                                        <span class="badge bg-primary bg-opacity-10 text-primary p-2">CI/CD</span>
+                                        <span class="badge bg-primary bg-opacity-10 text-primary p-2">TDD</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section-padding">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="display-4 fw-bold mb-4">Featured Projects</h2>
+                        <p class="lead mb-4">
+                            Showcasing my latest work and creative solutions
+                        </p>
+                        <p class="fst-italic text-muted mb-5">
+                            "Every project is an opportunity to learn, to figure out problems and challenges, to invent
+                            and reinvent"
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Project Filter -->
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-8">
+                        <div class="d-flex justify-content-center flex-wrap gap-2">
+                            <button class="btn btn-primary bg-opacity-10 active" data-filter="all">All Projects</button>
+                            <button class="btn btn-primary bg-opacity-10" data-filter="web">Web Development</button>
+                            <button class="btn btn-primary bg-opacity-10" data-filter="ai">AI Integration</button>
+                            <button class="btn btn-primary bg-opacity-10" data-filter="mobile">Mobile Apps</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Project Card 1 -->
+                    <div class="col-md-6 col-lg-4" data-category="web">
+                        <div class="card border-0 shadow-sm h-100 project-card">
+                            <div class="position-relative">
+                                <img src="assets/project1-thumb.jpg" class="card-img-top" alt="Project 1 Thumbnail">
+                                <div class="project-overlay d-flex align-items-center justify-content-center">
+                                    <div class="d-flex gap-2">
+                                        <a href="#" class="btn btn-primary btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#project1Modal">
+                                            <i class="bi bi-eye-fill"></i>
+                                        </a>
+                                        <a href="[Live Demo URL]" class="btn btn-primary btn-sm" target="_blank">
+                                            <i class="bi bi-box-arrow-up-right"></i>
+                                        </a>
+                                        <a href="[GitHub URL]" class="btn btn-primary btn-sm" target="_blank">
+                                            <i class="bi bi-github"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="contact-icon-wrapper bg-primary bg-opacity-10 p-2 rounded-circle me-2">
+                                        <i class="bi bi-code-square fs-5 text-primary"></i>
+                                    </div>
+                                    <h5 class="card-title mb-0">[Project 1 Name]</h5>
+                                </div>
+                                <p class="card-text text-muted">
+                                    [Brief project description that highlights the key features and technologies used]
+                                </p>
+                                <div class="d-flex flex-wrap gap-2 mt-3">
+                                    <span class="badge bg-primary bg-opacity-10 text-primary">React</span>
+                                    <span class="badge bg-primary bg-opacity-10 text-primary">Node.js</span>
+                                    <span class="badge bg-primary bg-opacity-10 text-primary">MongoDB</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 2 -->
+                    <div class="col-md-6 col-lg-4" data-category="ai">
+                        <div class="card border-0 shadow-sm h-100 project-card">
+                            <div class="position-relative">
+                                <img src="assets/project2-thumb.jpg" class="card-img-top" alt="Project 2 Thumbnail">
+                                <div class="project-overlay d-flex align-items-center justify-content-center">
+                                    <div class="d-flex gap-2">
+                                        <a href="#" class="btn btn-primary btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#project2Modal">
+                                            <i class="bi bi-eye-fill"></i>
+                                        </a>
+                                        <a href="[Live Demo URL]" class="btn btn-primary btn-sm" target="_blank">
+                                            <i class="bi bi-box-arrow-up-right"></i>
+                                        </a>
+                                        <a href="[GitHub URL]" class="btn btn-primary btn-sm" target="_blank">
+                                            <i class="bi bi-github"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="contact-icon-wrapper bg-primary bg-opacity-10 p-2 rounded-circle me-2">
+                                        <i class="bi bi-robot fs-5 text-primary"></i>
+                                    </div>
+                                    <h5 class="card-title mb-0">[Project 2 Name]</h5>
+                                </div>
+                                <p class="card-text text-muted">
+                                    [Brief project description that highlights the key features and technologies used]
+                                </p>
+                                <div class="d-flex flex-wrap gap-2 mt-3">
+                                    <span class="badge bg-primary bg-opacity-10 text-primary">Python</span>
+                                    <span class="badge bg-primary bg-opacity-10 text-primary">TensorFlow</span>
+                                    <span class="badge bg-primary bg-opacity-10 text-primary">Flask</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 3 -->
+                    <div class="col-md-6 col-lg-4" data-category="mobile">
+                        <div class="card border-0 shadow-sm h-100 project-card">
+                            <div class="position-relative">
+                                <img src="assets/project3-thumb.jpg" class="card-img-top" alt="Project 3 Thumbnail">
+                                <div class="project-overlay d-flex align-items-center justify-content-center">
+                                    <div class="d-flex gap-2">
+                                        <a href="#" class="btn btn-primary btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#project3Modal">
+                                            <i class="bi bi-eye-fill"></i>
+                                        </a>
+                                        <a href="[Live Demo URL]" class="btn btn-primary btn-sm" target="_blank">
+                                            <i class="bi bi-box-arrow-up-right"></i>
+                                        </a>
+                                        <a href="[GitHub URL]" class="btn btn-primary btn-sm" target="_blank">
+                                            <i class="bi bi-github"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="contact-icon-wrapper bg-primary bg-opacity-10 p-2 rounded-circle me-2">
+                                        <i class="bi bi-phone fs-5 text-primary"></i>
+                                    </div>
+                                    <h5 class="card-title mb-0">[Project 3 Name]</h5>
+                                </div>
+                                <p class="card-text text-muted">
+                                    [Brief project description that highlights the key features and technologies used]
+                                </p>
+                                <div class="d-flex flex-wrap gap-2 mt-3">
+                                    <span class="badge bg-primary bg-opacity-10 text-primary">React Native</span>
+                                    <span class="badge bg-primary bg-opacity-10 text-primary">Firebase</span>
+                                    <span class="badge bg-primary bg-opacity-10 text-primary">Redux</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Modals -->
+                <!-- Project 1 Modal -->
+                <div class="modal fade" id="project1Modal" tabindex="-1" aria-labelledby="project1ModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header border-0">
+                                <h5 class="modal-title" id="project1ModalLabel">[Project 1 Name]</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="assets/project1-thumb.jpg" class="img-fluid rounded"
+                                            alt="Project 1 Screenshot">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6 class="fw-bold mb-3">Project Overview</h6>
+                                        <p>[Detailed project description]</p>
+
+                                        <h6 class="fw-bold mb-3">Key Features</h6>
+                                        <ul class="list-unstyled">
+                                            <li class="mb-2">
+                                                <i class="bi bi-check2-circle text-primary me-2"></i>
+                                                [Feature 1]
+                                            </li>
+                                            <li class="mb-2">
+                                                <i class="bi bi-check2-circle text-primary me-2"></i>
+                                                [Feature 2]
+                                            </li>
+                                            <li>
+                                                <i class="bi bi-check2-circle text-primary me-2"></i>
+                                                [Feature 3]
+                                            </li>
+                                        </ul>
+
+                                        <h6 class="fw-bold mb-3">Technologies Used</h6>
+                                        <div class="d-flex flex-wrap gap-2">
+                                            <span class="badge bg-primary bg-opacity-10 text-primary">React</span>
+                                            <span class="badge bg-primary bg-opacity-10 text-primary">Node.js</span>
+                                            <span class="badge bg-primary bg-opacity-10 text-primary">MongoDB</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer border-0">
+                                <a href="[Live Demo URL]" class="btn btn-primary" target="_blank">
+                                    <i class="bi bi-box-arrow-up-right me-2"></i>View Live Demo
+                                </a>
+                                <a href="[GitHub URL]" class="btn btn-outline-primary" target="_blank">
+                                    <i class="bi bi-github me-2"></i>View Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 Modal -->
+                <div class="modal fade" id="project2Modal" tabindex="-1" aria-labelledby="project2ModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header border-0">
+                                <h5 class="modal-title" id="project2ModalLabel">[Project 2 Name]</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="assets/project2-thumb.jpg" class="img-fluid rounded"
+                                            alt="Project 2 Screenshot">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6 class="fw-bold mb-3">Project Overview</h6>
+                                        <p>[Detailed project description]</p>
+
+                                        <h6 class="fw-bold mb-3">Key Features</h6>
+                                        <ul class="list-unstyled">
+                                            <li class="mb-2">
+                                                <i class="bi bi-check2-circle text-primary me-2"></i>
+                                                [Feature 1]
+                                            </li>
+                                            <li class="mb-2">
+                                                <i class="bi bi-check2-circle text-primary me-2"></i>
+                                                [Feature 2]
+                                            </li>
+                                            <li>
+                                                <i class="bi bi-check2-circle text-primary me-2"></i>
+                                                [Feature 3]
+                                            </li>
+                                        </ul>
+
+                                        <h6 class="fw-bold mb-3">Technologies Used</h6>
+                                        <div class="d-flex flex-wrap gap-2">
+                                            <span class="badge bg-primary bg-opacity-10 text-primary">Python</span>
+                                            <span class="badge bg-primary bg-opacity-10 text-primary">TensorFlow</span>
+                                            <span class="badge bg-primary bg-opacity-10 text-primary">Flask</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer border-0">
+                                <a href="[Live Demo URL]" class="btn btn-primary" target="_blank">
+                                    <i class="bi bi-box-arrow-up-right me-2"></i>View Live Demo
+                                </a>
+                                <a href="[GitHub URL]" class="btn btn-outline-primary" target="_blank">
+                                    <i class="bi bi-github me-2"></i>View Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 Modal -->
+                <div class="modal fade" id="project3Modal" tabindex="-1" aria-labelledby="project3ModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header border-0">
+                                <h5 class="modal-title" id="project3ModalLabel">[Project 3 Name]</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="assets/project3-thumb.jpg" class="img-fluid rounded"
+                                            alt="Project 3 Screenshot">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6 class="fw-bold mb-3">Project Overview</h6>
+                                        <p>[Detailed project description]</p>
+
+                                        <h6 class="fw-bold mb-3">Key Features</h6>
+                                        <ul class="list-unstyled">
+                                            <li class="mb-2">
+                                                <i class="bi bi-check2-circle text-primary me-2"></i>
+                                                [Feature 1]
+                                            </li>
+                                            <li class="mb-2">
+                                                <i class="bi bi-check2-circle text-primary me-2"></i>
+                                                [Feature 2]
+                                            </li>
+                                            <li>
+                                                <i class="bi bi-check2-circle text-primary me-2"></i>
+                                                [Feature 3]
+                                            </li>
+                                        </ul>
+
+                                        <h6 class="fw-bold mb-3">Technologies Used</h6>
+                                        <div class="d-flex flex-wrap gap-2">
+                                            <span class="badge bg-primary bg-opacity-10 text-primary">React
+                                                Native</span>
+                                            <span class="badge bg-primary bg-opacity-10 text-primary">Firebase</span>
+                                            <span class="badge bg-primary bg-opacity-10 text-primary">Redux</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer border-0">
+                                <a href="[Live Demo URL]" class="btn btn-primary" target="_blank">
+                                    <i class="bi bi-box-arrow-up-right me-2"></i>View Live Demo
+                                </a>
+                                <a href="[GitHub URL]" class="btn btn-outline-primary" target="_blank">
+                                    <i class="bi bi-github me-2"></i>View Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- End Project Modals -->
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section-padding bg-body-tertiary">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="display-4 fw-bold mb-4">Let's Connect</h2>
+                        <p class="lead mb-4">
+                            I'm always open to discussing new projects, creative ideas, or opportunities to be part of
+                            your
+                            visions.
+                        </p>
+                        <p class="fst-italic text-muted mb-5">
+                            "Living, learning, & leveling up one day at a time."
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center g-4">
+                    <!-- Contact Card -->
+                    <div class="col-md-6">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body p-4">
+                                <h3 class="card-title h4 mb-4">Get in Touch</h3>
+
+                                <!-- Contact Methods -->
+                                <div class="d-flex flex-column gap-4">
+                                    <!-- Email -->
+                                    <div class="d-flex align-items-center">
+                                        <div class="contact-icon-wrapper rounded-circle me-3">
+                                            <i class="bi bi-envelope-fill fs-4"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="h6 mb-1">Email</h4>
+                                            <a href="mailto:martin@designcodemastery.com"
+                                                class="text-decoration-none link-primary">martin@designcodemastery.com</a>
+                                        </div>
+                                    </div>
+
+                                    <!-- LinkedIn -->
+                                    <div class="d-flex align-items-center">
+                                        <div class="contact-icon-wrapper rounded-circle me-3">
+                                            <i class="bi bi-linkedin fs-4"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="h6 mb-1">LinkedIn</h4>
+                                            <a href="https://www.linkedin.com/in/martin-ferrero-thompson"
+                                                class="text-decoration-none link-primary" target="_blank"
+                                                rel="noopener noreferrer">Connect on LinkedIn</a>
+                                        </div>
+                                    </div>
+
+                                    <!-- GitHub -->
+                                    <div class="d-flex align-items-center">
+                                        <div class="contact-icon-wrapper rounded-circle me-3">
+                                            <i class="bi bi-github fs-4"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="h6 mb-1">GitHub</h4>
+                                            <a href="https://github.com/Martin-Ferrero-Thompson"
+                                                class="text-decoration-none link-primary" target="_blank"
+                                                rel="noopener noreferrer">Check out my repos</a>
+                                        </div>
+                                    </div>
+
+                                    <!-- Location -->
+                                    <div class="d-flex align-items-center">
+                                        <div class="contact-icon-wrapper rounded-circle me-3">
+                                            <i class="bi bi-geo-alt-fill fs-4"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="h6 mb-1">Location</h4>
+                                            <span class="text-primary">Pamplona, España</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Availability Card -->
+                    <div class="col-md-6">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body p-4">
+                                <h3 class="card-title h4 mb-4">Current Availability</h3>
+                                <div class="d-flex align-items-center mb-4">
+                                    <div class="contact-icon-wrapper bg-success bg-opacity-10 p-3 rounded-circle me-3">
+                                        <i class="bi bi-calendar-check fs-4 text-success"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="h6 mb-1">Open for Opportunities</h4>
+                                        <p class="text-muted mb-0">Available for freelance projects and full-time
+                                            positions</p>
+                                    </div>
+                                </div>
+
+                                <h4 class="h6 mb-3">Preferred Projects:</h4>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="badge bg-primary bg-opacity-10 text-primary p-2">Web Development</span>
+                                    <span class="badge bg-primary bg-opacity-10 text-primary p-2">Full-Stack
+                                        Projects</span>
+                                    <span class="badge bg-primary bg-opacity-10 text-primary p-2">AI Integration</span>
+
+                                </div>
+
+                                <div class="mt-4 pt-3 border-top">
+                                    <h4 class="h6 mb-3">Best Time to Contact:</h4>
+                                    <p class="text-primary mb-0">
+                                        <i class="bi bi-clock me-2"></i>
+                                        Mon - Fri, 9:00 - 18:00 CET
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Call to Action -->
+                <div class="row justify-content-center mt-5">
+                    <div class="col-lg-8 text-center">
+                        <p class="lead mb-4">
+                            Have an exciting project in mind? Let's turn that idea into reality!
+                        </p>
+                        <a href="mailto:[your.email@example.com]" class="btn btn-primary btn-lg">
+                            <i class="bi bi-send me-2"></i>
+                            Send Me a Message
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-4 bg-dark text-white text-center">
+        <div class="container">
+            <p class="mb-0">©2025 Design Code Mastery. All Rights Reserved.</p>
+            <p class="mb-0">Designed and Built by Martin Ferrero-Thompson and his Agentic Friends</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- Color Mode Switcher Script -->
+    <script src="js/color-modes.js"></script>
+    <!-- Ripple Effect Script -->
+    <script src="js/ripple.js"></script>
+
+</body>
+
+</html>
